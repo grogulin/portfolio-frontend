@@ -13,8 +13,7 @@ function App() {
     <Router basename='/portfolio'>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route
-          path="/content-management"
+        <Route path="/content-management" 
           element={isAuthenticated ? <ProjectsList /> : <LoginPage setIsAuthenticated={setIsAuthenticated} />}
         />
       </Routes>

@@ -2,7 +2,7 @@ import React from 'react';
 import { QuillDeltaToHtmlConverter } from 'quill-delta-to-html';
 import { Row, Col } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
+import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 
@@ -38,10 +38,10 @@ const ProjectCard = ({ project }) => {
         </Col>
         {/* Right part */}
         <Col md={4} className="d-flex flex-column align-items-center justify-content-center">
-          {/* <a href={project.link} className="btn btn-primary mb-2 w-100 mt-2" target="_blank" rel="noreferrer">
+          <a href={project.link} className="btn btn-primary mb-2 w-100 mt-2" target="_blank" rel="noreferrer">
             <FontAwesomeIcon icon={faExternalLinkAlt} className="btn-icon" />
             Try it
-          </a> */}
+          </a>
           <a href={project.github_link} className="btn btn-primary w-100" target="_blank" rel="noreferrer">
             <FontAwesomeIcon icon={faGithub} className="btn-icon" />
             Code
