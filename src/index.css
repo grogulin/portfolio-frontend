@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,400;10..48,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&display=swap');
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Lora', serif;
+  background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/email-pattern.png');
+  /* background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/dot-grid.png'); */
+  /* background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/checkerboard-cross.png'); Replace with the actual path */
+  background-repeat: repeat;
+
+  background-color: #f4f4f4;
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  display: inline-block;
+  background-color: #f5f5f5; /* Grey background color */
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: monospace; /* Apply monospace font */
+  font-size: 90%; /* Adjust font size if needed */
+}
+
+
+
+.hashtag-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -5px; /* Adjust as needed */
+}
+
+.hashtag {
+  background-color: rgb(255, 204, 110);
+  color: white;
+  font-size: 14px;
+  padding: 0px 4px;
+  margin: 4px;
+  border-radius: 5px;
+  font-family: monospace; /* You can adjust this */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bricolage Grotesque';
+}
+
+h1, h2, h3, h4 {
+  font-weight: bold !important;
+  text-align: left !important;
+}
+
+header {
+  /* background-color: #333; */
+  /* color: white; */
+  display: block;
+  align-items: center; /* Vertically center the content */
+  padding: 0 20px;
+  /* font-weight: 700; */
+}
+
+/* Header height for extra small screens (xs) */
+@media (max-width: 575.98px) {
+  header {
+    height: 60px; /* Let content determine the height */
+  }
+}
+
+/* Header height for small screens (sm) and larger */
+@media (min-width: 576px) {
+  header {
+    height: 120px;
+  }
+}
+
+/* Footer height for extra small screens (xs) */
+/* @media (max-width: 575.98px) {
+  footer {
+    height: 1000px !important;
+  }
+} */
+
+/* Footer height for small screens (sm) and larger */
+
+/* @media (min-width: 576px) {
+  footer {
+    height: 120px;
+  }
+} */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  pointer-events: none; /* Allow clicks and interactions behind the overlay */
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.loader-svg {
+  width: 250px;
+  height: 250px;
+}
+
+.project-card {
+  margin-bottom: 32px;
+  border-radius: 50px !important;
+  padding: 30px !important;
+  /* margin-left: 15px; */
+  /* margin-right: 15px; */
+}
+
+.row-project-card {
+  border-bottom: 5px #eee dotted;
+  padding-bottom: 24px;
+}
+
+.row-project-card:last-child {
+  border-bottom: none; /* Remove border from the last row */
+}
+
+.card-body {
+  padding: 16px 12px 0px !important;
+  /* padding-left: 12px !important;
+  padding-right: 12px !important;
+  padding-top: 8px !important;
+  padding-bottom: 0px !important; */
+  /* padding: 0px !important; */
+  font-family: 'Lora', serif;
+}
+
+.card-text {
+  text-align: left;
+}
+
+.profile-name {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 16px;
+  font-family: 'Bricolage Grotesque';
+  font-weight: bold;
+}
+
+.bio-card {
+  border-radius: 50px !important;
+}
+
+.bio-text {
+  text-align: left;
+  font-family: 'Lora', serif;
+}
+
+header {
+  margin-bottom: 100px;
+  /* margin-left: 15px; */
+  /* margin-right: 15px; */
+  border-radius: 50px;
+  border-radius: 0px 0px 50px 50px;
+  padding: 50px;
+}
+
+footer {
+  margin-top: 100px !important;
+  /* margin-left: 15px; */
+  /* margin-right: 15px; */
+  border-radius: 50px 50px 0px 0px;
+  padding: 50px 0px;
+  /* border-top: 5px #dddddd solid; */
+  
+}
+
+.contact-button {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.btn-icon {
+  margin-right: 10px;
+}
+
+.custom-col {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.add-project {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c3e6cb;
+  border: 5px dashed rgba(30, 100, 50, 0.3);
+  border-radius: 5px;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: all 0.3s;
+}
+
+.add-project:hover {
+  background-color: #86c68f;
+  border-radius: 20px;
+}
