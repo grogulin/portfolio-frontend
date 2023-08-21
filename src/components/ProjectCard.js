@@ -2,7 +2,7 @@ import React from 'react';
 import { QuillDeltaToHtmlConverter } from 'quill-delta-to-html';
 import { Row, Col } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
+// import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 
