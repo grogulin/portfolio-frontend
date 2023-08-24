@@ -5,6 +5,7 @@ import ProjectForm from './ProjectForm';
 import { faEdit, faTrash, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Quill from 'quill';
+import backendURL from '../config';
 
 
 function ProjectsList() {
@@ -17,7 +18,7 @@ function ProjectsList() {
   }, []);
 
   const fetchProjects = () => {
-    fetch('https://freedevdom.mooo.com/portfolio/api/projects')
+    fetch(`${backendURL}/projects`)
       .then(response => response.json())
       .then(data => setProjects(data))
       .catch(error => console.error('Error fetching projects:', error));
@@ -46,7 +47,7 @@ function ProjectsList() {
     if (editingProject.isNew) {
       try {
         const token = localStorage.getItem('token');
-        const response = await fetch('https://freedevdom.mooo.com/portfolio/api/projects/new', {
+        const response = await fetch(`${backendURL}/projects/new`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -70,7 +71,7 @@ function ProjectsList() {
     } else {
       try {
         const token = localStorage.getItem('token');
-        const response = await fetch(`https://freedevdom.mooo.com/portfolio/api/projects/${editingProject.id}`, {
+        const response = await fetch(`${backendURL}/projects/${editingProject.id}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
@@ -102,7 +103,7 @@ function ProjectsList() {
   const handleDelete = async projectId => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`https://freedevdom.mooo.com/portfolio/api/projects/${projectId}`, {
+      const response = await fetch(`${backendURL}/projects/${projectId}`, {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json',

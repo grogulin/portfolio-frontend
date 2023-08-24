@@ -24,7 +24,6 @@ function ProjectForm({ onSave, onCancel, initialData, formType }) {
   
     return (
       <Form onSubmit={handleSubmit}>
-        <h1>{formType}</h1>
         <Row>
           <Col md={6}>
             <FormGroup>

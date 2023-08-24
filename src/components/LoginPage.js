@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Container, Row, Col } from 'reactstrap'; // Import Container, Row, Col from reactstrap
+import backendURL from '../config';
 
 function LoginPage({ setIsAuthenticated }) {
   const navigate = useNavigate();
@@ -13,7 +14,7 @@ function LoginPage({ setIsAuthenticated }) {
     
     try {
       // Send login credentials to the backend for authentication
-      const response = await fetch('https://freedevdom.mooo.com/portfolio/api/auth/login', {
+      const response = await fetch(`${backendURL}/auth/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

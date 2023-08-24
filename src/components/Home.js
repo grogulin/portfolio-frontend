@@ -8,13 +8,14 @@ import Header from './Header';
 import Bio from './Bio';
 import ProjectsPane from './ProjectsPane';
 import Footer from './Footer';
+import backendURL from '../config';
 
 function App() {
   const [loading, setLoading] = useState(true);
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    axios.get('https://freedevdom.mooo.com/portfolio/api/projects')
+    axios.get(`${backendURL}/projects`)
       .then(response => {
         setProjects(response.data);
         setLoading(false);
@@ -28,6 +29,7 @@ function App() {
   return (
     <div className="App">
       <Container>
+
         <Row>
           <Header title="Hi there and welcome!" />
         </Row>
