@@ -5,6 +5,7 @@ import 'react-quill/dist/quill.snow.css'; // Import Quill styles
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSave, faTimes } from '@fortawesome/free-solid-svg-icons';
 
+
 function ProjectForm({ onSave, onCancel, initialData, formType }) {
     const [formData, setFormData] = useState(initialData || {});
   
@@ -15,6 +16,7 @@ function ProjectForm({ onSave, onCancel, initialData, formType }) {
   
     const handleQuillChange = value => {
       setFormData(prevData => ({ ...prevData, description: value }));
+      console.log(value)
     };
   
     const handleSubmit = event => {

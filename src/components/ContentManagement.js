@@ -27,7 +27,16 @@ function ProjectsList() {
   function htmlToDelta(html) {
     const quillContainer = document.createElement('div');
     quillContainer.innerHTML = html;
+
+    const ulElements = quillContainer.querySelectorAll('ul');
+    ulElements.forEach(ulElement => {
+      const divWrapper = document.createElement('div');
+      ulElement.parentNode.insertBefore(divWrapper, ulElement);
+      divWrapper.appendChild(ulElement);
+    });
+    
     const quill = new Quill(quillContainer);
+    console.log(quill.getContents());
     return quill.getContents();
   }
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 
@@ -17,6 +17,11 @@ const Footer = () => {
           <FontAwesomeIcon icon={faEnvelope} className="btn-icon" />
            Email
         </a>
+        <a href="https://github.com/grogulin?tab=repositories" className="btn btn-primary contact-button btn-linkedin">
+          <FontAwesomeIcon icon={faGithub} className="btn-icon" />
+           GitHub
+        </a>
+        
       </div>
     </footer>
   );
