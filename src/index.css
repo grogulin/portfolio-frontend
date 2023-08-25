@@ -217,3 +217,14 @@ footer {
   background-color: #86c68f;
   border-radius: 20px;
 }
+
+p a {
+  color: #0253aa; /* Blue link color */
+  text-decoration: underline; /* Underline links to make them stand out */
+  transition: color 0.2s ease-in-out; /* Smooth color transition on hover */
+}
+
+/* Change link color on hover */
+p a:hover {
+  color: #00152b; /* Darker blue on hover */
+}
