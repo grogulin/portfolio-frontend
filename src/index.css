@@ -78,21 +78,6 @@ header {
   }
 }
 
-/* Footer height for extra small screens (xs) */
-/* @media (max-width: 575.98px) {
-  footer {
-    height: 1000px !important;
-  }
-} */
-
-/* Footer height for small screens (sm) and larger */
-
-/* @media (min-width: 576px) {
-  footer {
-    height: 120px;
-  }
-} */
-
 .overlay {
   position: fixed;
   top: 0;
@@ -123,8 +108,6 @@ header {
   margin-bottom: 32px;
   border-radius: 50px !important;
   padding: 30px !important;
-  /* margin-left: 15px; */
-  /* margin-right: 15px; */
 }
 
 .row-project-card {
@@ -138,11 +121,6 @@ header {
 
 .card-body {
   padding: 16px 12px 0px !important;
-  /* padding-left: 12px !important;
-  padding-right: 12px !important;
-  padding-top: 8px !important;
-  padding-bottom: 0px !important; */
-  /* padding: 0px !important; */
   font-family: 'Lora', serif;
 }
 
@@ -169,8 +147,6 @@ header {
 
 header {
   margin-bottom: 100px;
-  /* margin-left: 15px; */
-  /* margin-right: 15px; */
   border-radius: 50px;
   border-radius: 0px 0px 50px 50px;
   padding: 50px;
@@ -178,11 +154,8 @@ header {
 
 footer {
   margin-top: 100px !important;
-  /* margin-left: 15px; */
-  /* margin-right: 15px; */
   border-radius: 50px 50px 0px 0px;
   padding: 50px 0px;
-  /* border-top: 5px #dddddd solid; */
   
 }
 
@@ -227,4 +200,13 @@ p a {
 /* Change link color on hover */
 p a:hover {
   color: #00152b; /* Darker blue on hover */
+}
+
+.profile-photo-placeholder {
+  width: 300px;
+  height: 300px;
+  background: #f0f0f0;
+  background-image: url('img/profile_pic.png');
+  background-size: cover;
+  background-position: center
 }
