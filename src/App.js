@@ -10,7 +10,7 @@ function App() {
 
 
   return (
-    <Router basename='/myprojects'>
+    <Router basename='/myprojects/'>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/content-management" 
